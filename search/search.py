@@ -112,7 +112,7 @@ def depthFirstSearch(problem):
              continue
          else:
              if problem.isGoalState(state):
-                 reachedGoal=tree
+                 reachedGoal=True
                  goalState=state
              lifoStack.push(state)
              tree.create_node(state,state,currentState,action)
@@ -142,19 +142,22 @@ def depthFirstSearch(problem):
 
 
 def breadthFirstSearch(problem):
-    lifoStack=util.Queue()
+    queue=util.Queue()
     visitedStates=set()
     tree=treelib.Tree()
     reachedGoal = False
     goalState = None
 
     currentState = problem.getStartState()
-    lifoStack.push(currentState)
+    queue.push(currentState)
     tree.create_node(currentState,currentState,parent=None,data=currentState)
     visitedStates.add(currentState)
+    l=0
+    lenSuccessorStates=0
 
     while not reachedGoal:
-     currentState=lifoStack.pop()
+
+     currentState=queue.pop()
      print()
      successorStates=problem.getSuccessors(currentState)
      for i in range(len(successorStates)):
@@ -165,15 +168,19 @@ def breadthFirstSearch(problem):
              print()
              continue
          else:
+             print()
              if problem.isGoalState(state):
-                 reachedGoal=tree
+                 reachedGoal=True
                  goalState=state
-             lifoStack.push(state)
+                 print()
+             queue.push(state)
              tree.create_node(state,state,currentState,action)
+             print()
              visitedStates.add(state)
              print()
 
     pathToGoalNodes = pathToGoal(tree, goalState)
+    print()
     actions=[]
     for i in range(len(pathToGoalNodes)):
      actions.append(pathToGoalNodes[i].data)
@@ -183,19 +190,19 @@ def breadthFirstSearch(problem):
 
 def uniformCostSearch(problem):
 
-    lifoStack=util.PriorityQueue()
+    priotiyQueue=util.PriorityQueue()
     visitedStates=set()
     tree=treelib.Tree()
     reachedGoal = False
     goalState = None
 
     currentState = problem.getStartState()
-    lifoStack.push(currentState,-1)
+    priotiyQueue.push(currentState,0)
     tree.create_node(currentState,currentState,parent=None,data=currentState)
     visitedStates.add(currentState)
 
     while not reachedGoal:
-     currentState=lifoStack.pop()
+     currentState=priotiyQueue.pop()
      print()
      successorStates=problem.getSuccessors(currentState)
      for i in range(len(successorStates)):
@@ -208,9 +215,9 @@ def uniformCostSearch(problem):
              continue
          else:
              if problem.isGoalState(state):
-                 reachedGoal=tree
+                 reachedGoal=True
                  goalState=state
-             lifoStack.push(state,cost)
+             priotiyQueue.push(state,cost)
              tree.create_node(state,state,currentState,action)
              visitedStates.add(state)
              print()
@@ -232,6 +239,52 @@ def nullHeuristic(state, problem=None):
 def aStarSearch(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
     "*** YOUR CODE HERE ***"
+    priotiyQueue = util.PriorityQueue()
+    visitedStates = set()
+    tree = treelib.Tree()
+    reachedGoal = False
+    goalState = None
+    print()
+
+    currentState = problem.getStartState()
+    priotiyQueue.push(currentState, heuristic(currentState,problem))
+    tree.create_node(currentState, currentState, parent=None, data=currentState)
+    visitedStates.add(currentState)
+    print()
+
+    while not reachedGoal:
+        currentState = priotiyQueue.pop()
+        print()
+        successorStates = problem.getSuccessors(currentState)
+        for i in range(len(successorStates)):
+            state = successorStates[i][0]
+            action = successorStates[i][1]
+            print()
+            if state in visitedStates:
+                print()
+                continue
+            else:
+                if problem.isGoalState(state):
+                    reachedGoal = True
+                    goalState = state
+                    print()
+                tree.create_node(state, state, currentState, action)
+                cost=len(pathToGoal(tree,state))
+                heu=heuristic(state,problem)
+                f=heu+cost
+                print()
+                priotiyQueue.push(state, f)
+                print()
+                visitedStates.add(state)
+                print()
+
+    pathToGoalNodes = pathToGoal(tree, goalState)
+    print()
+    actions = []
+    for i in range(len(pathToGoalNodes)):
+        actions.append(pathToGoalNodes[i].data)
+
+    return actions
     util.raiseNotDefined()
 
 

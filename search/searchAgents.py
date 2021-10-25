@@ -40,6 +40,7 @@ from game import Actions
 import util
 import time
 import search
+from copy import deepcopy
 
 class GoWestAgent(Agent):
     "An agent that goes West until it can't."
@@ -284,7 +285,7 @@ class CornersProblem(search.SearchProblem):
         self.startingPosition = startingGameState.getPacmanPosition()
         top, right = self.walls.height-2, self.walls.width-2
         self.food=startingGameState.getFood()
-        self.corners = [(1,1), (1,top), (right, 1), (right, top)]
+        self.corners = ((1,1), (1,top), (right, 1), (right, top))
         for corner in self.corners:
             if not startingGameState.hasFood(*corner):
                 print('Warning: no food in corner ' + str(corner))
@@ -301,7 +302,9 @@ class CornersProblem(search.SearchProblem):
         space)
         """
         "*** YOUR CODE HERE ***"
-        return (self.startingPosition,self.corners)
+        startState=(self.startingPosition,self.corners)
+        print()
+        return startState
 
     def isGoalState(self, state):
         """
@@ -314,8 +317,12 @@ class CornersProblem(search.SearchProblem):
         #        cornerNumber+=1
         #if cornerNumber>0:return False
         #else:return True
-        if len(state[1]):return True
-        else:return False
+        if len(state[1]):
+            print()
+            return False
+        else:
+            print()
+            return True
 
     def getSuccessors(self, state):
         """
@@ -334,7 +341,16 @@ class CornersProblem(search.SearchProblem):
          dx, dy = Actions.directionToVector(action)
          nextx, nexty = int(x + dx), int(y + dy)
          if not self.walls[nextx][nexty]:
-             nextState = ((nextx, nexty),self.getCorners())
+
+             corners=state[1]
+             if (nextx,nexty) in corners:
+                 print()
+                 corners=list(corners)
+                 corners.remove((nextx,nexty))
+                 corners=tuple(corners)
+
+             nextState = ((nextx, nexty),corners)
+             print()
              cost = 1
              successors.append((nextState, action, cost))
 
@@ -346,6 +362,7 @@ class CornersProblem(search.SearchProblem):
          #   hitsWall = self.walls[nextx][nexty]
          "*** YOUR CODE HERE ***"
 
+        print()
         self._expanded += 1 # DO NOT CHANGE
         return successors
 
@@ -360,23 +377,17 @@ class CornersProblem(search.SearchProblem):
             dx, dy = Actions.directionToVector(action)
             x, y = int(x + dx), int(y + dy)
             if self.walls[x][y]: return 999999
+        print()
         return len(actions)
 
     def getCorners(self):
-        corners = []
-        for i in range(len(self.food)):
-            for j in range(len(self.food[i])):
-                if self.food[i][j]:
-                    corners.append((i, j))
-        return corners
+        return self.corners
 
 def manhattanDistance(position, nextPosition):
     "The Manhattan distance heuristic for a PositionSearchProblem"
     xy1 = position
     xy2 = nextPosition
     return abs(xy1[0] - xy2[0]) + abs(xy1[1] - xy2[1])
-
-
 
 def cornersHeuristic(state, problem):
     """
@@ -392,9 +403,10 @@ def cornersHeuristic(state, problem):
     admissible (as well as consistent).
     """
 
-    corners = problem.getCorners() # These are the corner coordinates
+    corners = state[1] # These are the corner coordinates
     currentLocation=state[0]
     sumDistance=0
+    print()
     while len(corners):
      priorityQueue = util.PriorityQueue()
      for i in range(len(corners)):
@@ -402,12 +414,13 @@ def cornersHeuristic(state, problem):
          priorityQueue.push(corners[i],distance)
      nearestCorner=priorityQueue.pop()
      sumDistance+=manhattanDistance(currentLocation,nearestCorner)
-     currentLocation=nearestCorner
+     currentLocation=deepcopy(nearestCorner)
+     corners=list(corners)
      corners.remove(nearestCorner)
+     if len(corners):corners=tuple(corners)
+     print()
+    print()
     return sumDistance
-
-
-
 
 
     "*** YOUR CODE HERE ***"
