@@ -74,6 +74,20 @@ def tinyMazeSearch(problem):
     w = Directions.WEST
     return  [s, s, w, s, w, w, s, w]
 
+def pathToGoal(tree,goalState):
+    pathToLeaves = tree.paths_to_leaves()
+    pathToGoal = None
+    for i in range(len(pathToLeaves)):
+        if goalState in pathToLeaves[i]:
+            pathToGoal = pathToLeaves[i]
+
+    pathToGoal = pathToGoal[1:len(pathToGoal)]
+    pathToGoalNodes = []
+    for i in range(len(pathToGoal)):
+        pathToGoalNodes.append(tree.get_node(pathToGoal[i]))
+    return pathToGoalNodes
+
+
 def depthFirstSearch(problem):
     lifoStack=util.Stack()
     visitedStates=set()
@@ -105,17 +119,7 @@ def depthFirstSearch(problem):
              visitedStates.add(state)
              print()
 
-    pathToLeaves=tree.paths_to_leaves()
-    pathToGoal=None
-    for i in range(len(pathToLeaves)):
-        if goalState in pathToLeaves[i]:
-            pathToGoal=pathToLeaves[i]
-
-    pathToGoal=pathToGoal[1:len(pathToGoal)]
-    pathToGoalNodes=[]
-    for i in range(len(pathToGoal)):
-        pathToGoalNodes.append(tree.get_node(pathToGoal[i]))
-
+    pathToGoalNodes=pathToGoal(tree,goalState)
     actions=[]
     for i in range(len(pathToGoalNodes)):
      actions.append(pathToGoalNodes[i].data)
@@ -138,7 +142,6 @@ def depthFirstSearch(problem):
 
 
 def breadthFirstSearch(problem):
-    from game import Directions
     lifoStack=util.Queue()
     visitedStates=set()
     tree=treelib.Tree()
@@ -170,17 +173,7 @@ def breadthFirstSearch(problem):
              visitedStates.add(state)
              print()
 
-    pathToLeaves=tree.paths_to_leaves()
-    pathToGoal=None
-    for i in range(len(pathToLeaves)):
-        if goalState in pathToLeaves[i]:
-            pathToGoal=pathToLeaves[i]
-
-    pathToGoal=pathToGoal[1:len(pathToGoal)]
-    pathToGoalNodes=[]
-    for i in range(len(pathToGoal)):
-        pathToGoalNodes.append(tree.get_node(pathToGoal[i]))
-
+    pathToGoalNodes = pathToGoal(tree, goalState)
     actions=[]
     for i in range(len(pathToGoalNodes)):
      actions.append(pathToGoalNodes[i].data)
@@ -189,7 +182,6 @@ def breadthFirstSearch(problem):
 
 
 def uniformCostSearch(problem):
-
 
     lifoStack=util.PriorityQueue()
     visitedStates=set()
@@ -223,17 +215,7 @@ def uniformCostSearch(problem):
              visitedStates.add(state)
              print()
 
-    pathToLeaves=tree.paths_to_leaves()
-    pathToGoal=None
-    for i in range(len(pathToLeaves)):
-        if goalState in pathToLeaves[i]:
-            pathToGoal=pathToLeaves[i]
-
-    pathToGoal=pathToGoal[1:len(pathToGoal)]
-    pathToGoalNodes=[]
-    for i in range(len(pathToGoal)):
-        pathToGoalNodes.append(tree.get_node(pathToGoal[i]))
-
+    pathToGoalNodes = pathToGoal(tree, goalState)
     actions=[]
     for i in range(len(pathToGoalNodes)):
      actions.append(pathToGoalNodes[i].data)
