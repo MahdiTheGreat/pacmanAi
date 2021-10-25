@@ -389,6 +389,12 @@ def manhattanDistance(position, nextPosition):
     xy2 = nextPosition
     return abs(xy1[0] - xy2[0]) + abs(xy1[1] - xy2[1])
 
+def euclideanDistance(position, nextPosition):
+    "The Euclidean distance heuristic for a PositionSearchProblem"
+    xy1 = position
+    xy2 = nextPosition
+    return ( (xy1[0] - xy2[0]) ** 2 + (xy1[1] - xy2[1]) ** 2 ) ** 0.5
+
 def cornersHeuristic(state, problem):
     """
     A heuristic for the CornersProblem that you defined.
@@ -414,6 +420,7 @@ def cornersHeuristic(state, problem):
          priorityQueue.push(corners[i],distance)
      nearestCorner=priorityQueue.pop()
      sumDistance+=manhattanDistance(currentLocation,nearestCorner)
+     #sumDistance += euclideanDistance(currentLocation, nearestCorner)
      currentLocation=deepcopy(nearestCorner)
      corners=list(corners)
      corners.remove(nearestCorner)

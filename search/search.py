@@ -279,7 +279,22 @@ def aStarSearch(problem, heuristic=nullHeuristic):
                 print()
 
     pathToGoalNodes = pathToGoal(tree, goalState)
-    print()
+    fOfPath=[]
+    costOfPath=[]
+    heuOfPath=[]
+    for i in range(len(pathToGoalNodes)):
+        state=pathToGoalNodes[i].tag
+        heu=heuristic(state,problem)
+        cost=len(pathToGoal(tree,state))
+        costOfPath.append(cost)
+        heuOfPath.append(heu)
+        fOfPath.append(cost+heu)
+    print("f of path is")
+    print(fOfPath)
+    print("cost of path is")
+    print(costOfPath)
+    print("heu of path is")
+    print(heuOfPath)
     actions = []
     for i in range(len(pathToGoalNodes)):
         actions.append(pathToGoalNodes[i].data)
