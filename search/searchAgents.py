@@ -212,6 +212,7 @@ class PositionSearchProblem(search.SearchProblem):
 
         return successors
 
+    
     def getCostOfActions(self, actions):
         """
         Returns the cost of a particular sequence of actions. If those actions

@@ -99,13 +99,20 @@ def depthFirstSearch(problem):
     reachedGoal = False
     goalState = None
     currentState = problem.getStartState()
-    lifoStack.push(currentState)
-    tree.create_node(currentState,currentState,parent=None,data=currentState)
-    visitedStates.add(currentState)
+    lifoStack.push((currentState,None,"None"))
+    parentFlag=True
 
     while not reachedGoal:
-     currentState=lifoStack.pop()
+     temp=lifoStack.pop()
+     currentState=temp[0]
+     father=temp[1]
+     action=temp[2]
+     tree.create_node(currentState, currentState, father, action)
+     visitedStates.add(currentState)
      print()
+     if problem.isGoalState(currentState):
+         goalState = currentState
+         break
      successorStates=problem.getSuccessors(currentState)
      for i in range(len(successorStates)):
          state=successorStates[i][0]
@@ -115,12 +122,7 @@ def depthFirstSearch(problem):
              print()
              continue
          else:
-             if problem.isGoalState(state):
-                 reachedGoal=True
-                 goalState=state
-             lifoStack.push(state)
-             tree.create_node(state,state,currentState,action)
-             visitedStates.add(state)
+             lifoStack.push((state,currentState,action))
              print()
 
     pathToGoalNodes=pathToGoal(tree,goalState)

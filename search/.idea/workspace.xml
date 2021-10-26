@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/../.idea/pacmanAi.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchAgents.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchAgents.py" afterDir="false" />
     </list>
@@ -22,7 +21,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pacman.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
+            <state relative-caret-position="-2019">
               <caret line="528" selection-start-line="528" selection-end-line="528" />
               <folding>
                 <element signature="e#1979#2009#0" expanded="true" />
@@ -31,26 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/searchAgents.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="192" column="46" lean-forward="true" selection-start-line="192" selection-start-column="46" selection-end-line="192" selection-end-column="46" />
-              <folding>
-                <element signature="e#1354#1381#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search.py">
+        <entry file="file://$PROJECT_DIR$/grading.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
-              <folding>
-                <element signature="e#774#785#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="137">
+              <caret line="270" column="21" lean-forward="true" selection-start-line="270" selection-start-column="21" selection-end-line="270" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -58,19 +42,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autograder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+            <state relative-caret-position="1195">
+              <caret line="286" column="82" selection-start-line="286" selection-start-column="82" selection-end-line="286" selection-end-column="82" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util.py">
+        <entry file="file://$PROJECT_DIR$/searchAgents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="447" column="4" selection-start-line="447" selection-start-column="4" selection-end-line="447" selection-end-column="4" />
+            <state relative-caret-position="3842">
+              <caret line="667" selection-start-line="667" selection-end-line="667" />
               <folding>
-                <element signature="e#1292#1302#0" expanded="true" />
+                <element signature="e#1354#1381#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/search.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="109" column="56" selection-start-line="109" selection-start-column="50" selection-end-line="109" selection-end-column="56" />
+              <folding>
+                <element signature="e#774#785#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,8 +99,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/search.py" />
         <option value="$PROJECT_DIR$/searchAgents.py" />
+        <option value="$PROJECT_DIR$/search.py" />
       </list>
     </option>
   </component>
@@ -154,7 +150,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.autograder">
+  <component name="RunManager" selected="Python.pacman">
     <configuration name="autograder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="search" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -169,6 +165,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/autograder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="grading" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="search" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/grading.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -221,11 +239,13 @@
     <list>
       <item itemvalue="Python.pacman" />
       <item itemvalue="Python.autograder" />
+      <item itemvalue="Python.grading" />
       <item itemvalue="Python tests.Doctests in eightpuzzle" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.autograder" />
+        <item itemvalue="Python.grading" />
         <item itemvalue="Python tests.Doctests in eightpuzzle" />
       </list>
     </recent_temporary>
@@ -242,7 +262,7 @@
       <updated>1634991468427</updated>
       <workItem from="1634991479004" duration="20121000" />
       <workItem from="1635154047603" duration="21185000" />
-      <workItem from="1635264428071" duration="3626000" />
+      <workItem from="1635264428071" duration="9856000" />
     </task>
     <servers />
   </component>
@@ -252,19 +272,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44932000" />
+    <option name="totallyTimeSpent" value="51162000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.022692889" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18910742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.049099836" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5433715" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.64811784" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.049099836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -312,49 +331,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <condition expression="len(currentState[1])&gt;len(state[1])" language="Python" />
-          <url>file://$PROJECT_DIR$/search.py</url>
-          <line>277</line>
-          <option name="timeStamp" value="69" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <condition expression="foodsLocations[i]==14" language="Python" />
           <url>file://$PROJECT_DIR$/searchAgents.py</url>
-          <line>637</line>
+          <line>638</line>
           <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/searchAgents.py</url>
-          <line>555</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/searchAgents.py</url>
-          <line>693</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/search.py</url>
-          <line>278</line>
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/search.py</url>
-          <line>254</line>
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/searchAgents.py</url>
-          <line>666</line>
-          <option name="timeStamp" value="91" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/search$Doctests_in_eightpuzzle.coverage" NAME="Doctests in eightpuzzle Coverage Results" MODIFIED="1635086351727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/search$autograder.coverage" NAME="autograder Coverage Results" MODIFIED="1635268097946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/search$pacman.coverage" NAME="pacman Coverage Results" MODIFIED="1635265484476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/search$grading.coverage" NAME="grading Coverage Results" MODIFIED="1635269438274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/search$autograder.coverage" NAME="autograder Coverage Results" MODIFIED="1635275593763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/search$pacman.coverage" NAME="pacman Coverage Results" MODIFIED="1635275661027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -413,13 +402,6 @@
     <entry file="file://$PROJECT_DIR$/layout.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://C:/Program Files (x86)/Python38-32/Lib/site-packages/treelib/tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="293" selection-start-line="293" selection-end-line="293" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -434,7 +416,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="5222">
           <caret line="447" column="4" selection-start-line="447" selection-start-column="4" selection-end-line="447" selection-end-column="4" />
           <folding>
             <element signature="e#1292#1302#0" expanded="true" />
@@ -444,12 +426,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grading.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4137" />
+        <state relative-caret-position="137">
+          <caret line="270" column="21" lean-forward="true" selection-start-line="270" selection-start-column="21" selection-end-line="270" selection-end-column="21" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pacman.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
+        <state relative-caret-position="-2019">
           <caret line="528" selection-start-line="528" selection-end-line="528" />
           <folding>
             <element signature="e#1979#2009#0" expanded="true" />
@@ -457,29 +441,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search.py">
+    <entry file="file://$PROJECT_DIR$/autograder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="95" column="26" lean-forward="true" selection-start-line="95" selection-start-column="26" selection-end-line="95" selection-end-column="26" />
-          <folding>
-            <element signature="e#774#785#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1195">
+          <caret line="286" column="82" selection-start-line="286" selection-start-column="82" selection-end-line="286" selection-end-column="82" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/autograder.py">
+    <entry file="file://C:/Program Files (x86)/Python38-32/Lib/site-packages/treelib/tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+        <state relative-caret-position="25">
+          <caret line="294" selection-start-line="294" selection-end-line="294" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/searchAgents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="192" column="46" lean-forward="true" selection-start-line="192" selection-start-column="46" selection-end-line="192" selection-end-column="46" />
+        <state relative-caret-position="3842">
+          <caret line="667" selection-start-line="667" selection-end-line="667" />
           <folding>
             <element signature="e#1354#1381#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="109" column="56" selection-start-line="109" selection-start-column="50" selection-end-line="109" selection-end-column="56" />
+          <folding>
+            <element signature="e#774#785#0" expanded="true" />
           </folding>
         </state>
       </provider>
