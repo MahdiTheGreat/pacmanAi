@@ -130,6 +130,7 @@ def depthFirstSearch(problem):
 
     return actions
 
+
     """
     Search the deepest nodes in the search tree first.
 
@@ -251,6 +252,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     print()
 
     currentState = problem.getStartState()
+    print()
     priotiyQueue.push(currentState, heuristic(currentState,problem))
     tree.create_node(currentState, currentState, parent=None, data=currentState)
     visitedStates.add(currentState)
@@ -274,6 +276,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
                     print()
                 tree.create_node(state, state, currentState, action)
                 cost=len(pathToGoal(tree,state))
+                print()
                 heu=heuristic(state,problem)
                 f=heu+cost
                 print()
