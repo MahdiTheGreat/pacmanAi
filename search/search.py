@@ -83,8 +83,12 @@ def pathToGoal(tree,goalState):
 
     pathToGoal = pathToGoal[1:len(pathToGoal)]
     pathToGoalNodes = []
+    currentNode=None
     for i in range(len(pathToGoal)):
-        pathToGoalNodes.append(tree.get_node(pathToGoal[i]))
+        if currentNode==goalState:break
+        else:
+         currentNode=pathToGoal[i]
+         pathToGoalNodes.append(tree.get_node(currentNode))
     return pathToGoalNodes
 
 
