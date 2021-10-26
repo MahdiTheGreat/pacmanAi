@@ -449,30 +449,64 @@ class FoodSearchProblem:
       foodGrid:       a Grid (see game.py) of either True or False, specifying remaining food
     """
     def __init__(self, startingGameState):
-        self.start = (startingGameState.getPacmanPosition(), startingGameState.getFood())
+
         self.walls = startingGameState.getWalls()
-        self.startingGameState = startingGameState
-        self._expanded = 0 # DO NOT CHANGE
-        self.heuristicInfo = {} # A dictionary for the heuristic to store information
+        self.startingPosition = startingGameState.getPacmanPosition()
+        self.food = startingGameState.getFood()
+        self.foodLocation=self.getFoodLocations()
+        self._expanded = 0
+        print()
+
+
+    def getFoodLocations(self):
+     food=self.food.data
+     foodLocations=[]
+     for i in range(len(food)):
+      for j in range(len(food[i])):
+       if food[i][j]:
+        foodLocations.append((i,j))
+     return tuple(foodLocations)
 
     def getStartState(self):
-        return self.start
+        startState = (self.startingPosition, self.foodLocation)
+        print()
+        return startState
 
     def isGoalState(self, state):
-        return state[1].count() == 0
+        if len(state[1]):
+            print()
+            return False
+        else:
+            print()
+            return True
 
     def getSuccessors(self, state):
         "Returns successor states, the actions they require, and a cost of 1."
-        successors = []
         self._expanded += 1 # DO NOT CHANGE
-        for direction in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
-            x,y = state[0]
-            dx, dy = Actions.directionToVector(direction)
+        successors = []
+        for action in [Directions.NORTH, Directions.SOUTH, Directions.EAST, Directions.WEST]:
+            x, y = state[0]
+            dx, dy = Actions.directionToVector(action)
             nextx, nexty = int(x + dx), int(y + dy)
             if not self.walls[nextx][nexty]:
-                nextFood = state[1].copy()
-                nextFood[nextx][nexty] = False
-                successors.append( ( ((nextx, nexty), nextFood), direction, 1) )
+                corners = state[1]
+                if (nextx, nexty) in corners:
+                    print()
+                    corners = list(corners)
+                    corners.remove((nextx, nexty))
+                    corners = tuple(corners)
+                nextState = ((nextx, nexty), corners)
+                print()
+                cost = 1
+                successors.append((nextState, action, cost))
+            # Add a successor state to the successor list if the action is legal
+            # Here's a code snippet for figuring out whether a new position hits a wall:
+            #   x,y = currentPosition
+            #   dx, dy = Actions.directionToVector(action)
+            #   nextx, nexty = int(x + dx), int(y + dy)
+            #   hitsWall = self.walls[nextx][nexty]
+            "*** YOUR CODE HERE ***"
+        print()
         return successors
 
     def getCostOfActions(self, actions):
@@ -523,9 +557,27 @@ def foodHeuristic(state, problem):
     Subsequent calls to this heuristic can access
     problem.heuristicInfo['wallCount']
     """
-    position, foodGrid = state
+    corners = state[1]  # These are the corner coordinates
+    currentLocation = state[0]
+    sumDistance = 0
+    print()
+    while len(corners):
+        priorityQueue = util.PriorityQueue()
+        for i in range(len(corners)):
+            distance = manhattanDistance(currentLocation, corners[i])
+            priorityQueue.push(corners[i], distance)
+        nearestCorner = priorityQueue.pop()
+        sumDistance += manhattanDistance(currentLocation, nearestCorner)
+        # sumDistance += euclideanDistance(currentLocation, nearestCorner)
+        currentLocation = deepcopy(nearestCorner)
+        corners = list(corners)
+        corners.remove(nearestCorner)
+        if len(corners): corners = tuple(corners)
+        print()
+    print()
+    return sumDistance
     "*** YOUR CODE HERE ***"
-    return 0
+
 
 class ClosestDotSearchAgent(SearchAgent):
     "Search for all food using a sequence of searches"
