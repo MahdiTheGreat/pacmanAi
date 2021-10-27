@@ -157,7 +157,6 @@ def breadthFirstSearch(problem):
     currentState = problem.getStartState()
     queue.push((currentState, None, "None"))
     visitedStates.add(currentState)
-    parentFlag = True
     print()
 
     while not reachedGoal:
@@ -194,20 +193,21 @@ def breadthFirstSearch(problem):
 
 def uniformCostSearch(problem):
 
-    priorityQeuue = util.PriorityQueue()
+    priorityQueue = util.PriorityQueue()
     visitedStates = set()
     tree = treelib.Tree()
     reachedGoal = False
     goalState = None
     currentState = problem.getStartState()
-    priorityQeuue.push((currentState, None, "None"),0)
-    parentFlag = True
+    priorityQueue.push((currentState, None, "None"),0)
+    print()
 
     while not reachedGoal:
-        temp = priorityQeuue.pop()
+        temp = priorityQueue.pop()
         currentState = temp[0]
         father = temp[1]
         action = temp[2]
+        print()
         tree.create_node(currentState, currentState, father, action)
         visitedStates.add(currentState)
         print()
@@ -224,15 +224,17 @@ def uniformCostSearch(problem):
                 print()
                 continue
             else:
-                priorityQeuue.push((state, currentState, action),cost)
+                priorityQueue.push((state, currentState, action),cost)
                 print()
 
     pathToGoalNodes = pathToGoal(tree, goalState)
     actions = []
     for i in range(len(pathToGoalNodes)):
         actions.append(pathToGoalNodes[i].data)
-
+    print()
     return actions
+
+
 def nullHeuristic(state, problem=None):
     """
     A heuristic function estimates the cost from the current state to the nearest
