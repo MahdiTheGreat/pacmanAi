@@ -8,6 +8,25 @@
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/graph_backtrack.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/graph_backtrack.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/graph_bfs_vs_dfs.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/graph_bfs_vs_dfs.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/graph_infinite.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/graph_infinite.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/graph_manypaths.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/graph_manypaths.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_0_graph.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_0_graph.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_1_problemC.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_1_problemC.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_2_problemE.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_2_problemE.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_3_problemW.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_3_problemW.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_4_testSearch.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q3/ucs_4_testSearch.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/util.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,20 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/autograder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-730">
-              <caret line="286" column="82" selection-start-line="286" selection-start-column="82" selection-end-line="286" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/searchAgents.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4643">
-              <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-              <folding>
-                <element signature="e#1354#1381#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="208">
+              <caret line="294" selection-start-line="294" selection-end-line="294" />
             </state>
           </provider>
         </entry>
@@ -41,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/searchTestClasses.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="131" column="33" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="33" />
+            <state relative-caret-position="116">
+              <caret line="166" column="25" lean-forward="true" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -50,31 +57,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="771">
-              <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+            <state relative-caret-position="90">
+              <caret line="237" column="17" lean-forward="true" selection-start-line="237" selection-start-column="17" selection-end-line="237" selection-end-column="17" />
               <folding>
                 <element signature="e#774#785#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files (x86)/Python38-32/Lib/site-packages/treelib/tree.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="480" column="8" selection-start-line="480" selection-start-column="8" selection-end-line="480" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5549">
-              <caret line="447" column="4" selection-start-line="447" selection-start-column="4" selection-end-line="447" selection-end-column="4" />
-              <folding>
-                <element signature="e#1292#1302#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,19 +79,24 @@
       <find>manha</find>
       <find>self.food</find>
       <find>tree</find>
-      <find>lifoStack</find>
-      <find>graph</find>
       <find>gra</find>
       <find>getorde</find>
+      <find>lifoStack</find>
+      <find>goalState</find>
+      <find>Queue</find>
       <find>queue</find>
+      <find>q3</find>
+      <find>graph</find>
     </findStrings>
     <replaceStrings>
       <replace>priotiyQueue</replace>
       <replace>food</replace>
-      <replace>queue</replace>
       <replace>priority</replace>
       <replace>priorityQeuue</replace>
       <replace>lifoStack</replace>
+      <replace>queue</replace>
+      <replace>priorityQueue`</replace>
+      <replace>node</replace>
       <replace>priorityQueue</replace>
     </replaceStrings>
   </component>
@@ -117,6 +108,7 @@
       <list>
         <option value="$PROJECT_DIR$/searchAgents.py" />
         <option value="$PROJECT_DIR$/searchTestClasses.py" />
+        <option value="$PROJECT_DIR$/util.py" />
         <option value="$PROJECT_DIR$/search.py" />
       </list>
     </option>
@@ -279,7 +271,7 @@
       <updated>1634991468427</updated>
       <workItem from="1634991479004" duration="20121000" />
       <workItem from="1635154047603" duration="21185000" />
-      <workItem from="1635264428071" duration="14874000" />
+      <workItem from="1635264428071" duration="30334000" />
     </task>
     <servers />
   </component>
@@ -289,19 +281,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56180000" />
+    <option name="totallyTimeSpent" value="71640000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49913943" visible="true" weight="0.18910742" />
-      <window_info id="Structure" order="1" sideWeight="0.5008606" side_tool="true" visible="true" weight="0.18910742" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8072289" visible="true" weight="0.18910742" />
+      <window_info id="Structure" order="1" sideWeight="0.19277108" side_tool="true" visible="true" weight="0.18910742" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.049099836" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.049099836" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.22913256" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -355,17 +346,58 @@
           <line>638</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <condition expression="len(problem.getOrderedSuccessorTuples())==4" language="Python" />
+          <url>file://$PROJECT_DIR$/search.py</url>
+          <line>255</line>
+          <option name="timeStamp" value="147" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/search.py</url>
+          <line>234</line>
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/search.py</url>
+          <line>225</line>
+          <option name="timeStamp" value="174" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/search.py</url>
+          <line>248</line>
+          <option name="timeStamp" value="175" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/search$Doctests_in_eightpuzzle.coverage" NAME="Doctests in eightpuzzle Coverage Results" MODIFIED="1635086351727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/search$grading.coverage" NAME="grading Coverage Results" MODIFIED="1635269438274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/search$autograder.coverage" NAME="autograder Coverage Results" MODIFIED="1635331828673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/search$autograder.coverage" NAME="autograder Coverage Results" MODIFIED="1635367695282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/search$pacman.coverage" NAME="pacman Coverage Results" MODIFIED="1635275661027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
+      <expression>
+        <expression-string>len(problem.getOrderedSuccessorTuples())==4</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(problem.getOrderedSuccessorTuples())==9</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>noRoot==0</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>currentState=='G'</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>len(problem.getOrderedSuccessorTuples())==5</expression-string>
         <language-id>Python</language-id>
@@ -388,26 +420,6 @@
       </expression>
       <expression>
         <expression-string>len(problem.)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len()</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>foodsLocations[i]==14</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>isinstance(foodsLocations[i],int)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(currentState[1])&gt;len(state[1])</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -456,13 +468,6 @@
     <entry file="file://$PROJECT_DIR$/textDisplay.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/autograder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-730">
-          <caret line="286" column="82" selection-start-line="286" selection-start-column="82" selection-end-line="286" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eightpuzzle.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -470,16 +475,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testClasses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1268">
-          <caret line="150" column="11" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/searchAgents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4643">
+        <state relative-caret-position="-6836">
           <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding>
             <element signature="e#1354#1381#0" expanded="true" />
@@ -489,18 +487,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5549">
-          <caret line="447" column="4" selection-start-line="447" selection-start-column="4" selection-end-line="447" selection-end-column="4" />
+        <state relative-caret-position="177">
+          <caret line="338" column="17" selection-start-line="338" selection-start-column="8" selection-end-line="338" selection-end-column="17" />
           <folding>
             <element signature="e#1292#1302#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/searchTestClasses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="131" column="33" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -511,10 +502,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testClasses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="133" column="37" selection-start-line="133" selection-start-column="37" selection-end-line="133" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/autograder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="294" selection-start-line="294" selection-end-line="294" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchTestClasses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="166" column="25" lean-forward="true" selection-start-line="166" selection-start-column="25" selection-end-line="166" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="771">
-          <caret line="131" lean-forward="true" selection-start-line="131" selection-end-line="131" />
+        <state relative-caret-position="90">
+          <caret line="237" column="17" lean-forward="true" selection-start-line="237" selection-start-column="17" selection-end-line="237" selection-end-column="17" />
           <folding>
             <element signature="e#774#785#0" expanded="true" />
           </folding>

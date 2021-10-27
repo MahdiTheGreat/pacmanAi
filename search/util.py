@@ -205,6 +205,7 @@ class PriorityQueue:
         else:
             self.push(item, priority)
 
+
 class PriorityQueueWithFunction(PriorityQueue):
     """
     Implements a priority queue with the same push/pop signature of the

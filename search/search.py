@@ -74,22 +74,7 @@ def tinyMazeSearch(problem):
     w = Directions.WEST
     return  [s, s, w, s, w, w, s, w]
 
-def pathToGoal(tree,goalState):
-    pathToLeaves = tree.paths_to_leaves()
-    pathToGoal = None
-    for i in range(len(pathToLeaves)):
-        if goalState in pathToLeaves[i]:
-            pathToGoal = pathToLeaves[i]
 
-    pathToGoal = pathToGoal[1:len(pathToGoal)]
-    pathToGoalNodes = []
-    currentNode=None
-    for i in range(len(pathToGoal)):
-        if currentNode==goalState:break
-        else:
-         currentNode=pathToGoal[i]
-         pathToGoalNodes.append(tree.get_node(currentNode))
-    return pathToGoalNodes
 
 
 def depthFirstSearch(problem):
@@ -100,13 +85,13 @@ def depthFirstSearch(problem):
     goalState = None
     currentState = problem.getStartState()
     lifoStack.push((currentState,None,"None"))
-    parentFlag=True
-
+    print()
     while not reachedGoal:
      temp=lifoStack.pop()
      currentState=temp[0]
      father=temp[1]
      action=temp[2]
+     if tree.get_node(currentState) != None: continue
      tree.create_node(currentState, currentState, father, action)
      visitedStates.add(currentState)
      print()
@@ -148,6 +133,28 @@ def depthFirstSearch(problem):
     """
 
 
+def pathToGoal(tree, goalState, noRoot=1):
+    pathToLeaves = tree.paths_to_leaves()
+    pathToGoal = None
+    print()
+    for i in range(len(pathToLeaves)):
+        if goalState in pathToLeaves[i]:
+            pathToGoal = pathToLeaves[i]
+
+    if noRoot: pathToGoal = pathToGoal[1:len(pathToGoal)]
+    pathToGoalNodes = []
+    currentNode = None
+    for i in range(len(pathToGoal)):
+        if currentNode == goalState:
+            break
+        else:
+            currentNode = pathToGoal[i]
+            currentState=tree.get_node(currentNode)
+            print()
+            pathToGoalNodes.append(currentState)
+    print()
+    return pathToGoalNodes
+
 def breadthFirstSearch(problem):
     queue = util.Queue()
     visitedStates = set()
@@ -156,16 +163,15 @@ def breadthFirstSearch(problem):
     goalState = None
     currentState = problem.getStartState()
     queue.push((currentState, None, "None"))
-    visitedStates.add(currentState)
     print()
-
     while not reachedGoal:
         temp = queue.pop()
         currentState = temp[0]
         father = temp[1]
         action = temp[2]
-        print()
+        if tree.get_node(currentState) != None: continue
         tree.create_node(currentState, currentState, father, action)
+        visitedStates.add(currentState)
         print()
         if problem.isGoalState(currentState):
             goalState = currentState
@@ -180,34 +186,50 @@ def breadthFirstSearch(problem):
                 continue
             else:
                 queue.push((state, currentState, action))
-                visitedStates.add(state)
                 print()
 
     pathToGoalNodes = pathToGoal(tree, goalState)
     actions = []
     for i in range(len(pathToGoalNodes)):
         actions.append(pathToGoalNodes[i].data)
-    print()
+
     return actions
 
+def costToNode(tree,node,costDict):
+
+    pathToNode=pathToGoal(tree,node,0)
+    print()
+    backwardsCost=0
+
+    for i in range(1,len(pathToNode),1):
+        print()
+        costArray=costDict[pathToNode[i-1].tag]
+        print()
+        for j in range(len(costArray)):
+            if costArray[j][0]==pathToNode[i].tag:
+                print()
+                backwardsCost+=costArray[j][1]
+                print()
+    print()
+    return backwardsCost
 
 def uniformCostSearch(problem):
 
     priorityQueue = util.PriorityQueue()
     visitedStates = set()
     tree = treelib.Tree()
+    costDict=dict()
     reachedGoal = False
     goalState = None
-    currentState = problem.getStartState()
-    priorityQueue.push((currentState, None, "None"),0)
+    root = problem.getStartState()
+    priorityQueue.push((root, None, "None"),0)
     print()
-
     while not reachedGoal:
         temp = priorityQueue.pop()
         currentState = temp[0]
         father = temp[1]
         action = temp[2]
-        print()
+        if tree.get_node(currentState) != None: continue
         tree.create_node(currentState, currentState, father, action)
         visitedStates.add(currentState)
         print()
@@ -219,19 +241,25 @@ def uniformCostSearch(problem):
             state = successorStates[i][0]
             action = successorStates[i][1]
             cost=successorStates[i][2]
+            if not currentState in costDict.keys():
+                costDict[currentState]=[]
+            costDict[currentState].append([state,cost])
+            if currentState==root:backwardsCost=0+cost
+            else:backwardsCost=costToNode(tree,currentState,costDict)+cost
             print()
             if state in visitedStates:
                 print()
                 continue
             else:
-                priorityQueue.push((state, currentState, action),cost)
+                priorityQueue.push((state, currentState, action),backwardsCost)
                 print()
+            print()
 
     pathToGoalNodes = pathToGoal(tree, goalState)
     actions = []
     for i in range(len(pathToGoalNodes)):
         actions.append(pathToGoalNodes[i].data)
-    print()
+
     return actions
 
 
