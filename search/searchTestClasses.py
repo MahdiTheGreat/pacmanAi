@@ -129,6 +129,10 @@ class GraphSearch(SearchProblem):
     def getExpandedStates(self):
         return self.expanded_states
 
+    def getOrderedSuccessorTuples(self):
+        return self.orderedSuccessorTuples
+
+
     def __str__(self):
         print(self.successors)
         edges = ["%s %s %s %s" % t for t in self.orderedSuccessorTuples]

@@ -149,93 +149,90 @@ def depthFirstSearch(problem):
 
 
 def breadthFirstSearch(problem):
-    queue=util.Queue()
-    visitedStates=set()
-    tree=treelib.Tree()
+    queue = util.Queue()
+    visitedStates = set()
+    tree = treelib.Tree()
     reachedGoal = False
     goalState = None
-
     currentState = problem.getStartState()
-    queue.push(currentState)
-    tree.create_node(currentState,currentState,parent=None,data=currentState)
+    queue.push((currentState, None, "None"))
     visitedStates.add(currentState)
-    l=0
-    lenSuccessorStates=0
+    parentFlag = True
+    print()
 
     while not reachedGoal:
-
-     currentState=queue.pop()
-     print()
-     successorStates=problem.getSuccessors(currentState)
-     for i in range(len(successorStates)):
-         state=successorStates[i][0]
-         action=successorStates[i][1]
-         print()
-         if  state in visitedStates:
-             print()
-             continue
-         else:
-             print()
-             if problem.isGoalState(state):
-                 reachedGoal=True
-                 goalState=state
-                 print()
-             queue.push(state)
-             tree.create_node(state,state,currentState,action)
-             print()
-             visitedStates.add(state)
-             print()
+        temp = queue.pop()
+        currentState = temp[0]
+        father = temp[1]
+        action = temp[2]
+        print()
+        tree.create_node(currentState, currentState, father, action)
+        print()
+        if problem.isGoalState(currentState):
+            goalState = currentState
+            break
+        successorStates = problem.getSuccessors(currentState)
+        for i in range(len(successorStates)):
+            state = successorStates[i][0]
+            action = successorStates[i][1]
+            print()
+            if state in visitedStates:
+                print()
+                continue
+            else:
+                queue.push((state, currentState, action))
+                visitedStates.add(state)
+                print()
 
     pathToGoalNodes = pathToGoal(tree, goalState)
-    print()
-    actions=[]
+    actions = []
     for i in range(len(pathToGoalNodes)):
-     actions.append(pathToGoalNodes[i].data)
-
+        actions.append(pathToGoalNodes[i].data)
+    print()
     return actions
 
 
 def uniformCostSearch(problem):
 
-    priotiyQueue=util.PriorityQueue()
-    visitedStates=set()
-    tree=treelib.Tree()
+    priorityQeuue = util.PriorityQueue()
+    visitedStates = set()
+    tree = treelib.Tree()
     reachedGoal = False
     goalState = None
-
     currentState = problem.getStartState()
-    priotiyQueue.push(currentState,0)
-    tree.create_node(currentState,currentState,parent=None,data=currentState)
-    visitedStates.add(currentState)
+    priorityQeuue.push((currentState, None, "None"),0)
+    parentFlag = True
 
     while not reachedGoal:
-     currentState=priotiyQueue.pop()
-     print()
-     successorStates=problem.getSuccessors(currentState)
-     for i in range(len(successorStates)):
-         state=successorStates[i][0]
-         action=successorStates[i][1]
-         cost=successorStates[i][2]
-         print()
-         if  state in visitedStates:
-             print()
-             continue
-         else:
-             if problem.isGoalState(state):
-                 reachedGoal=True
-                 goalState=state
-             priotiyQueue.push(state,cost)
-             tree.create_node(state,state,currentState,action)
-             visitedStates.add(state)
-             print()
+        temp = priorityQeuue.pop()
+        currentState = temp[0]
+        father = temp[1]
+        action = temp[2]
+        tree.create_node(currentState, currentState, father, action)
+        visitedStates.add(currentState)
+        print()
+        if problem.isGoalState(currentState):
+            goalState = currentState
+            break
+        successorStates = problem.getSuccessors(currentState)
+        for i in range(len(successorStates)):
+            state = successorStates[i][0]
+            action = successorStates[i][1]
+            cost=successorStates[i][2]
+            print()
+            if state in visitedStates:
+                print()
+                continue
+            else:
+                priorityQeuue.push((state, currentState, action),cost)
+                print()
 
     pathToGoalNodes = pathToGoal(tree, goalState)
-    actions=[]
+    actions = []
     for i in range(len(pathToGoalNodes)):
-     actions.append(pathToGoalNodes[i].data)
+        actions.append(pathToGoalNodes[i].data)
 
     return actions
-
 def nullHeuristic(state, problem=None):
     """
     A heuristic function estimates the cost from the current state to the nearest
