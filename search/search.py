@@ -144,6 +144,7 @@ def pathToGoal(tree, goalState, noRoot=1):
     if noRoot: pathToGoal = pathToGoal[1:len(pathToGoal)]
     pathToGoalNodes = []
     currentNode = None
+    print()
     for i in range(len(pathToGoal)):
         if currentNode == goalState:
             break
@@ -195,21 +196,13 @@ def breadthFirstSearch(problem):
 
     return actions
 
-def costToNode(tree,node,costDict):
+def costToNode(tree,node):
 
     pathToNode=pathToGoal(tree,node,0)
     print()
     backwardsCost=0
-
-    for i in range(1,len(pathToNode),1):
-        print()
-        costArray=costDict[pathToNode[i-1].tag]
-        print()
-        for j in range(len(costArray)):
-            if costArray[j][0]==pathToNode[i].tag:
-                print()
-                backwardsCost+=costArray[j][1]
-                print()
+    for i in range(len(pathToNode)):
+        backwardsCost+=pathToNode[i].data[1]
     print()
     return backwardsCost
 
@@ -218,19 +211,18 @@ def uniformCostSearch(problem):
     priorityQueue = util.PriorityQueue()
     visitedStates = set()
     tree = treelib.Tree()
-    costDict=dict()
     reachedGoal = False
     goalState = None
     root = problem.getStartState()
-    priorityQueue.push((root, None, "None"),0)
+    priorityQueue.push((root, None, ["None",0]),0)
     print()
     while not reachedGoal:
         temp = priorityQueue.pop()
         currentState = temp[0]
         father = temp[1]
-        action = temp[2]
+        actionAndCost=temp[2]
         if tree.get_node(currentState) != None: continue
-        tree.create_node(currentState, currentState, father, action)
+        tree.create_node(currentState, currentState, father, actionAndCost)
         visitedStates.add(currentState)
         print()
         if problem.isGoalState(currentState):
@@ -240,25 +232,21 @@ def uniformCostSearch(problem):
         for i in range(len(successorStates)):
             state = successorStates[i][0]
             action = successorStates[i][1]
-            cost=successorStates[i][2]
-            if not currentState in costDict.keys():
-                costDict[currentState]=[]
-            costDict[currentState].append([state,cost])
-            if currentState==root:backwardsCost=0+cost
-            else:backwardsCost=costToNode(tree,currentState,costDict)+cost
+            edgeCost=successorStates[i][2]
+            backwardsCost=costToNode(tree,currentState)+edgeCost
             print()
             if state in visitedStates:
                 print()
                 continue
             else:
-                priorityQueue.push((state, currentState, action),backwardsCost)
+                priorityQueue.push((state, currentState, [action,edgeCost]),backwardsCost)
                 print()
             print()
 
     pathToGoalNodes = pathToGoal(tree, goalState)
     actions = []
     for i in range(len(pathToGoalNodes)):
-        actions.append(pathToGoalNodes[i].data)
+        actions.append(pathToGoalNodes[i].data[0])
 
     return actions
 
