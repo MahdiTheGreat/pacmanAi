@@ -560,6 +560,7 @@ def foodHeuristic(state, problem):
         for i in range(len(corners)):
             distance = manhattanDistance(currentLocation, corners[i])
             priorityQueue.push(corners[i], distance)
+        print()
         nearestCorner = priorityQueue.pop()
         sumDistance += manhattanDistance(currentLocation, nearestCorner)
         #sumDistance += euclideanDistance(currentLocation, nearestCorner)

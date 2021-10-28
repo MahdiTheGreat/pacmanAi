@@ -492,13 +492,14 @@ class HeuristicTest(testClasses.TestCase):
 
     def checkHeuristic(self, heuristic, problem, state, solutionCost):
         h0 = heuristic(state, problem)
+        print()
 
         if solutionCost == 0:
             if h0 == 0:
                 return True, ''
             else:
                 return False, 'Heuristic failed H(goal) == 0 test'
-
+        print()
         if h0 < 0:
             return False, 'Heuristic failed H >= 0 test'
         if not h0 > 0:
