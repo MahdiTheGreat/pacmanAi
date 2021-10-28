@@ -41,6 +41,9 @@ import util
 import time
 import search
 from copy import deepcopy
+import itertools
+import sys
+
 
 class GoWestAgent(Agent):
     "An agent that goes West until it can't."
@@ -523,55 +526,136 @@ class AStarFoodSearchAgent(SearchAgent):
         self.searchFunction = lambda prob: search.aStarSearch(prob, foodHeuristic)
         self.searchType = FoodSearchProblem
 
+#def foodHeuristic(state, problem):
+#    """
+#    Your heuristic for the FoodSearchProblem goes here.
+#
+#    This heuristic must be consistent to ensure correctness.  First, try to come
+#    up with an admissible heuristic; almost all admissible heuristics will be
+#    consistent as well.
+#
+#    If using A* ever finds a solution that is worse uniform cost search finds,
+#    your heuristic is *not* consistent, and probably not admissible!  On the
+#    other hand, inadmissible or inconsistent heuristics may find optimal
+#    solutions, so be careful.
+#
+#    The state is a tuple ( pacmanPosition, foodGrid ) where foodGrid is a Grid
+#    (see game.py) of either True or False. You can call foodGrid.asList() to get
+#    a list of food coordinates instead.
+#
+#    If you want access to info like walls, capsules, etc., you can query the
+#    problem.  For example, problem.walls gives you a Grid of where the walls
+#    are.
+#
+#    If you want to *store* information to be reused in other calls to the
+#    heuristic, there is a dictionary called problem.heuristicInfo that you can
+#    use. For example, if you only want to count the walls once and store that
+#    value, try: problem.heuristicInfo['wallCount'] = problem.walls.count()
+#    Subsequent calls to this heuristic can access
+#    problem.heuristicInfo['wallCount']
+#    """
+#    corners = state[1]  # These are the corner coordinates
+#    currentLocation = state[0]
+#    sumDistance = 0
+#    print()
+#    while len(corners):
+#        priorityQueue = util.PriorityQueue()
+#        for i in range(len(corners)):
+#            distance = manhattanDistance(currentLocation, corners[i])
+#            priorityQueue.push(corners[i], distance)
+#        print()
+#        nearestCorner = priorityQueue.pop()
+#        sumDistance += manhattanDistance(currentLocation, nearestCorner)
+#        #sumDistance += euclideanDistance(currentLocation, nearestCorner)
+#        currentLocation = deepcopy(nearestCorner)
+#        corners = list(corners)
+#        corners.remove(nearestCorner)
+#        if len(corners): corners = tuple(corners)
+#        print()
+#    print()
+#    return sumDistance
+#    "*** YOUR CODE HERE ***"
+
+def costCalulator(costDict,source,corners):
+    stack = util.Stack()
+    stack.push([source, corners])
+    print()
+    while not stack.isEmpty():
+        arg = stack.pop()
+        source = arg[0]
+        corners = arg[1]
+        print()
+        costs = []
+        nextArg = None
+        i = 0
+        c1 = 0
+        c2 = 0
+        c3 = 0
+        if not (source, tuple(corners)) in costDict.keys():
+            print()
+            if len(corners) == 0:
+                costs.append(0)
+                print()
+            elif len(corners) == 1:
+                costs.append(manhattanDistance(source, corners[0]))
+                print()
+            else:
+                for i in range(1, len(corners), 1):
+                    loopSource = source
+                    loopCorners = corners[0:i]
+                    if (loopSource, tuple(loopCorners)) in costDict.keys():
+                        c1 = costDict[(loopSource, tuple(loopCorners))]
+                    else:
+                        nextArg = [loopSource, loopCorners]
+                        costs = []
+                        print()
+                        break
+
+                    loopSource = corners[i]
+                    loopCorners = corners[i + 1:len(corners)]
+                    if (loopSource, tuple(loopCorners)) in costDict.keys():
+                        c2 = costDict[(loopSource, tuple(loopCorners))]
+                    else:
+                        nextArg = [loopSource, loopCorners]
+                        costs = []
+                        print()
+                        break
+
+                    c3 = manhattanDistance(corners[i - 1], corners[i])
+                    print()
+
+                    costs.append(c1 + c2 + c3)
+                    print()
+
+        if len(costs):
+            costDict[(source, tuple(corners))] = min(costs)
+            print()
+        elif nextArg != None:
+            stack.push(arg)
+            stack.push(nextArg)
+            print()
+
 def foodHeuristic(state, problem):
-    """
-    Your heuristic for the FoodSearchProblem goes here.
+    """"""
 
-    This heuristic must be consistent to ensure correctness.  First, try to come
-    up with an admissible heuristic; almost all admissible heuristics will be
-    consistent as well.
-
-    If using A* ever finds a solution that is worse uniform cost search finds,
-    your heuristic is *not* consistent, and probably not admissible!  On the
-    other hand, inadmissible or inconsistent heuristics may find optimal
-    solutions, so be careful.
-
-    The state is a tuple ( pacmanPosition, foodGrid ) where foodGrid is a Grid
-    (see game.py) of either True or False. You can call foodGrid.asList() to get
-    a list of food coordinates instead.
-
-    If you want access to info like walls, capsules, etc., you can query the
-    problem.  For example, problem.walls gives you a Grid of where the walls
-    are.
-
-    If you want to *store* information to be reused in other calls to the
-    heuristic, there is a dictionary called problem.heuristicInfo that you can
-    use. For example, if you only want to count the walls once and store that
-    value, try: problem.heuristicInfo['wallCount'] = problem.walls.count()
-    Subsequent calls to this heuristic can access
-    problem.heuristicInfo['wallCount']
-    """
     corners = state[1]  # These are the corner coordinates
     currentLocation = state[0]
-    sumDistance = 0
+
+    cornersPermutations = itertools.permutations(corners)
+    costDict = dict()
+    costs = []
+    for item in cornersPermutations:
+        costCalulator(costDict, currentLocation, list(item))
+    keys = list(costDict.keys())
     print()
-    while len(corners):
-        priorityQueue = util.PriorityQueue()
-        for i in range(len(corners)):
-            distance = manhattanDistance(currentLocation, corners[i])
-            priorityQueue.push(corners[i], distance)
-        print()
-        nearestCorner = priorityQueue.pop()
-        sumDistance += manhattanDistance(currentLocation, nearestCorner)
-        #sumDistance += euclideanDistance(currentLocation, nearestCorner)
-        currentLocation = deepcopy(nearestCorner)
-        corners = list(corners)
-        corners.remove(nearestCorner)
-        if len(corners): corners = tuple(corners)
-        print()
+    for i in range(len(keys)):
+        if len(keys[i][1]) == len(corners):
+            key = keys[i]
+            cost = costDict[key]
+            print()
+            costs.append(cost)
     print()
-    return sumDistance
-    "*** YOUR CODE HERE ***"
+    return min(costs)
 
 
 class ClosestDotSearchAgent(SearchAgent):

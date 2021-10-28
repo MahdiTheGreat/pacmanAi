@@ -330,6 +330,7 @@ def getDisplay(graphicsByDefault, options=None):
 
 
 if __name__ == '__main__':
+    sys.setrecursionlimit(1500)
     options = readCommand(sys.argv)
     if options.generateSolutions:
         confirmGenerate()
