@@ -258,74 +258,68 @@ def nullHeuristic(state, problem=None):
     """
     return 0
 
+
 def aStarSearch(problem, heuristic=nullHeuristic):
-    """Search the node that has the lowest combined cost and heuristic first."""
-    "*** YOUR CODE HERE ***"
-    priotiyQueue = util.PriorityQueue()
+    priorityQueue = util.PriorityQueue()
     visitedStates = set()
     tree = treelib.Tree()
     reachedGoal = False
     goalState = None
+    root = problem.getStartState()
+    priorityQueue.push((root, None, ["None", 0]), 0)
     print()
-
-    currentState = problem.getStartState()
-    print()
-    priotiyQueue.push(currentState, heuristic(currentState,problem))
-    tree.create_node(currentState, currentState, parent=None, data=currentState)
-    visitedStates.add(currentState)
-    print()
-
     while not reachedGoal:
-        currentState = priotiyQueue.pop()
+        temp = priorityQueue.pop()
+        currentState = temp[0]
+        father = temp[1]
+        actionAndCost = temp[2]
+        if tree.get_node(currentState) != None: continue
+        tree.create_node(currentState, currentState, father, actionAndCost)
+        visitedStates.add(currentState)
         print()
+        if problem.isGoalState(currentState):
+            goalState = currentState
+            break
         successorStates = problem.getSuccessors(currentState)
         for i in range(len(successorStates)):
             state = successorStates[i][0]
             action = successorStates[i][1]
+            edgeCost = successorStates[i][2]
+            backwardsCost = costToNode(tree, currentState) + edgeCost
+            heu=heuristic(state,problem)
+            f=heu+backwardsCost
             print()
             if state in visitedStates:
                 print()
                 continue
             else:
-                if problem.isGoalState(state):
-                    reachedGoal = True
-                    goalState = state
-                    print()
-                tree.create_node(state, state, currentState, action)
-                cost=len(pathToGoal(tree,state))
+                priorityQueue.push((state, currentState, [action, edgeCost]), f)
                 print()
-                heu=heuristic(state,problem)
-                f=heu+cost
-                print()
-                priotiyQueue.push(state, f)
-                print()
-                visitedStates.add(state)
-                print()
+            print()
 
     pathToGoalNodes = pathToGoal(tree, goalState)
-    fOfPath=[]
-    costOfPath=[]
-    heuOfPath=[]
-    for i in range(len(pathToGoalNodes)):
-        state=pathToGoalNodes[i].tag
-        heu=heuristic(state,problem)
-        cost=len(pathToGoal(tree,state))
-        costOfPath.append(cost)
-        heuOfPath.append(heu)
-        fOfPath.append(cost+heu)
-    print("f of path is")
-    print(fOfPath)
-    print("cost of path is")
-    print(costOfPath)
-    print("heu of path is")
-    print(heuOfPath)
     actions = []
     for i in range(len(pathToGoalNodes)):
-        actions.append(pathToGoalNodes[i].data)
+        actions.append(pathToGoalNodes[i].data[0])
 
+    fOfPath = []
+    costOfPath = []
+    heuOfPath = []
+    #print()
+    #for i in range(len(pathToGoalNodes)):
+    #    state = pathToGoalNodes[i].tag
+    #    heu = heuristic(state, problem)
+    #    backwardsCost = costToNode(tree,tree.parent(state))
+    #    costOfPath.append(backwardsCost)
+    #    heuOfPath.append(heu)
+    #    fOfPath.append(backwardsCost + heu)
+    #print("f of path is")
+    #print(fOfPath)
+    #print("cost of path is")
+    #print(costOfPath)
+    #print("heu of path is")
+    #print(heuOfPath)
     return actions
-    util.raiseNotDefined()
-
 
 # Abbreviations
 bfs = breadthFirstSearch

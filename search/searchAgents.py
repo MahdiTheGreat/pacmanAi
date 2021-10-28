@@ -212,7 +212,7 @@ class PositionSearchProblem(search.SearchProblem):
 
         return successors
 
-    
+
     def getCostOfActions(self, actions):
         """
         Returns the cost of a particular sequence of actions. If those actions
@@ -562,7 +562,7 @@ def foodHeuristic(state, problem):
             priorityQueue.push(corners[i], distance)
         nearestCorner = priorityQueue.pop()
         sumDistance += manhattanDistance(currentLocation, nearestCorner)
-        # sumDistance += euclideanDistance(currentLocation, nearestCorner)
+        #sumDistance += euclideanDistance(currentLocation, nearestCorner)
         currentLocation = deepcopy(nearestCorner)
         corners = list(corners)
         corners.remove(nearestCorner)
