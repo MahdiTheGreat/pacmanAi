@@ -4,12 +4,14 @@ stuff = [1, 2, 3,4]
 import itertools
 list(itertools.permutations([1, 2, 3]))
 import util
+import math
 
 #corners=[(1, 1), (1, 8), (1, 16), (1, 17)]
 #currentLocation=(1,6)
-corners=[(1, 2), (6,2)]
-currentLocation=(2,4)
-
+#corners=[(1, 2), (6,2)]
+#currentLocation=(2,4)
+corners=((1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3), (4, 1), (4, 2), (4, 3))
+currentLocation=(1,1)
 
 
 def manhattanDistance(position, nextPosition):
@@ -42,61 +44,59 @@ def manhattanDistance(position, nextPosition):
 #         print()
 #         return minCost
 
-def costCalulator(costDict,source,corners):
+def costCalulator(costDict,source,corners,Min):
 
     stack=util.Stack()
     stack.push([source,corners])
+    notDone=True
     print()
-    while not stack.isEmpty():
+    while not stack.isEmpty() and notDone:
      arg=stack.pop()
      source=arg[0]
      corners=arg[1]
-     print()
-     costs=[]
      nextArg = None
-     i=0
-     c1=0
-     c2=0
-     c3=0
+     c1=-1
+     c2=-1
+     cost=-1
+     print()
+
      if not (source,tuple(corners)) in costDict.keys():
       print()
+
       if len(corners) == 0:
-          costs.append(0)
+          costDict[(source,tuple(corners))]=0
           print()
+
       elif len(corners) == 1:
-          costs.append(manhattanDistance(source, corners[0]))
+          costTemp=manhattanDistance(source, corners[0])
+          costDict[(source,tuple(corners))]=costTemp
+          if costTemp>Min:
+              notDone=False
           print()
+
       else:
-          for i in range(1,len(corners),1):
-           loopSource=source
-           loopCorners=corners[0:i]
-           if (loopSource, tuple(loopCorners)) in costDict.keys():
-               c1=costDict[(loopSource,tuple(loopCorners))]
-           else:
-               nextArg=[loopSource,loopCorners]
-               costs=[]
-               print()
-               break
+          #for i in range(1,len(corners),1):
+        loopSource=source
+        loopCorners=corners[0:len(corners)-1]
+        if (loopSource, tuple(loopCorners)) in costDict.keys():
+            c1=costDict[(loopSource,tuple(loopCorners))]
+            if c1>Min:notDone=False
+            print()
+        else:
+            nextArg=[loopSource,loopCorners]
+            print()
 
-           loopSource=corners[i]
-           loopCorners = corners[i+1:len(corners)]
-           if (loopSource, tuple(loopCorners)) in costDict.keys():
-               c2 = costDict[(loopSource, tuple(loopCorners))]
-           else:
-               nextArg = [loopSource, loopCorners]
-               costs = []
-               print()
-               break
-
-           c3=manhattanDistance(corners[i-1],corners[i])
-           print()
-
-           costs.append(c1+c2+c3)
-           print()
-
-     if len(costs):
-         costDict[(source,tuple(corners))]=min(costs)
+        if nextArg==None:
+         c2=manhattanDistance(corners[len(corners)-2],corners[len(corners)-1])
+         if c2>Min:notDone=False
+         cost=c1+c2
          print()
+
+     if cost>-1:
+         costDict[(source,tuple(corners))]=cost
+         if cost>Min:notDone=False
+         print()
+
      elif nextArg!=None:
           stack.push(arg)
           stack.push(nextArg)
@@ -105,22 +105,24 @@ def costCalulator(costDict,source,corners):
 
 
 def foodHeuristic(currentLocation,corners):
-    cornersPermutations=list(itertools.permutations(corners))
+    cornersPermutations=itertools.permutations(corners)
     costDict=dict()
     costs=[]
-    for i in range(len(cornersPermutations)):
-        costCalulator(costDict,currentLocation,list(cornersPermutations[i]))
+    Min=math.inf
+    for permutation in cornersPermutations:
+        costCalulator(costDict,currentLocation,list(list(permutation)),Min)
+        print()
     keys=list(costDict.keys())
     print()
     for i in range(len(keys)):
         if len(keys[i][1])==len(corners):
             key=keys[i]
             cost=costDict[key]
-            print()
-            costs.append(cost)
-    print()
-    return min(costs)
+            if cost<Min:
+                Min=cost
 
+    print()
+    return Min
 
 
 print(foodHeuristic(currentLocation,corners))

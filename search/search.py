@@ -269,6 +269,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
     priorityQueue.push((root, None, ["None", 0]), 0)
     print()
     while not reachedGoal:
+        print(len(visitedStates))
         temp = priorityQueue.pop()
         currentState = temp[0]
         father = temp[1]

@@ -7,41 +7,81 @@
       <change beforePath="$PROJECT_DIR$/../.idea/pacmanAi.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/autograder.py" beforeDir="false" afterPath="$PROJECT_DIR$/autograder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchAgents.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchAgents.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_cases/dijkstraTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/dijkstraTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_1.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_1.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_10.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_10.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_11.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_11.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_12.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_12.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_13.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_13.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_16.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_16.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_2.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_2.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_3.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_3.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_4.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_4.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_5.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_5.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_6.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_6.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_7.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_7.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_8.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_8.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_9.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_9.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_grade_tricky.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_grade_tricky.test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/food_heuristic_15.solution" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/q7/food_heuristic_15.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/astar_1_graph_heuristic.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/astar_1_graph_heuristic.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/astar_2_manhattan.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/astar_2_manhattan.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/astar_3_goalAtDequeue.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/astar_3_goalAtDequeue.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/graph_backtrack.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/graph_backtrack.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/graph_manypaths.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q4/graph_manypaths.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_10.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_10.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_11.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_11.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_12.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_12.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_8.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_8.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_9.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp4/food_heuristic_9.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp6/food_heuristic_13.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp6/food_heuristic_13.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp6/food_heuristic_15.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp6/food_heuristic_15.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp7/food_heuristic_grade_tricky.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUp7/food_heuristic_grade_tricky.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_17.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backUpOfTest/food_heuristic_17.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_1.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_1.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_2.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_2.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_3.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_3.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_4.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_4.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_6.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_6.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_7.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup3/food_heuristic_7.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup8/food_heuristic_16.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/backup8/food_heuristic_16.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/food_heuristic_14.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q7/food_heuristic_14.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/CONFIG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_1.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_1.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_10.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_10.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_11.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_11.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_12.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_12.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_13.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_13.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_2.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_2.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_3.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_3.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_4.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_4.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_5.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_5.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_6.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_6.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_7.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_7.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_8.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_8.test" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_9.solution" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/q8/closest_dot_9.test" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,10 +103,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_cases/dijkstraTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="102" selection-end-column="17" />
+            <state relative-caret-position="51">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding>
                 <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="501" column="14" selection-start-line="501" selection-start-column="14" selection-end-line="501" selection-end-column="14" />
+              <folding>
+                <element signature="e#1292#1302#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,8 +127,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/searchAgents.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="661" column="36" selection-start-line="661" selection-start-column="36" selection-end-line="661" selection-end-column="36" />
+            <state relative-caret-position="468">
+              <caret line="581" column="1" selection-start-line="581" selection-start-column="1" selection-end-line="581" selection-end-column="1" />
+              <caret line="582" column="1" selection-start-line="582" selection-start-column="1" selection-end-line="582" selection-end-column="1" />
+              <caret line="583" column="1" selection-start-line="583" selection-start-column="1" selection-end-line="583" selection-end-column="1" />
+              <caret line="584" column="1" selection-start-line="584" selection-start-column="1" selection-end-line="584" selection-end-column="1" />
+              <caret line="585" column="1" selection-start-line="585" selection-start-column="1" selection-end-line="585" selection-end-column="1" />
+              <caret line="586" column="1" selection-start-line="586" selection-start-column="1" selection-end-line="586" selection-end-column="1" />
+              <caret line="587" column="1" selection-start-line="587" selection-start-column="1" selection-end-line="587" selection-end-column="1" />
+              <caret line="588" column="1" selection-start-line="588" selection-start-column="1" selection-end-line="588" selection-end-column="1" />
+              <caret line="589" column="1" selection-start-line="589" selection-start-column="1" selection-end-line="589" selection-end-column="1" />
+              <caret line="590" column="1" selection-start-line="590" selection-start-column="1" selection-end-line="590" selection-end-column="1" />
+              <caret line="591" column="1" selection-start-line="591" selection-start-column="1" selection-end-line="591" selection-end-column="1" />
+              <caret line="592" column="1" selection-start-line="592" selection-start-column="1" selection-end-line="592" selection-end-column="1" />
               <folding>
                 <element signature="e#1354#1381#0" expanded="true" />
               </folding>
@@ -85,10 +148,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/searchTestClasses.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="501" selection-start-line="501" selection-end-line="501" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1067">
-              <caret line="307" selection-start-line="307" selection-end-line="307" />
+            <state relative-caret-position="259">
+              <caret line="271" column="33" selection-start-line="271" selection-start-column="33" selection-end-line="271" selection-end-column="33" />
               <folding>
                 <element signature="e#774#785#0" expanded="true" />
               </folding>
@@ -131,12 +203,12 @@
       <find>food</find>
       <find>foodHeur</find>
       <find>heurii</find>
-      <find>foodHeuristic</find>
       <find>mainSource</find>
       <find>mainCorners</find>
       <find>currentLocation</find>
       <find>foodHeu</find>
       <find>q7</find>
+      <find>foodHeuristic</find>
     </findStrings>
     <replaceStrings>
       <replace>priotiyQueue</replace>
@@ -160,11 +232,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/util.py" />
-        <option value="$PROJECT_DIR$/search.py" />
         <option value="$PROJECT_DIR$/searchTestClasses.py" />
         <option value="$PROJECT_DIR$/travelingSalesMan.py" />
         <option value="$PROJECT_DIR$/autograder.py" />
         <option value="$PROJECT_DIR$/test_cases/dijkstraTest.py" />
+        <option value="$PROJECT_DIR$/search.py" />
         <option value="$PROJECT_DIR$/searchAgents.py" />
       </list>
     </option>
@@ -220,7 +292,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.autograder">
+  <component name="RunManager" selected="Python.pacman">
     <configuration name="autograder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="search" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -301,7 +373,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pacman.py" />
-      <option name="PARAMETERS" value="-l mediumMaze -p SearchAgent" />
+      <option name="PARAMETERS" value="-l trickySearch -p AStarFoodSearchAgent" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -332,8 +404,8 @@
       <item itemvalue="Python.pacman" />
       <item itemvalue="Python.autograder" />
       <item itemvalue="Python.grading" />
-      <item itemvalue="Python tests.Doctests in eightpuzzle" />
       <item itemvalue="Python.dijkstraTest" />
+      <item itemvalue="Python tests.Doctests in eightpuzzle" />
     </list>
     <recent_temporary>
       <list>
@@ -356,7 +428,7 @@
       <updated>1634991468427</updated>
       <workItem from="1634991479004" duration="20121000" />
       <workItem from="1635154047603" duration="21185000" />
-      <workItem from="1635264428071" duration="57244000" />
+      <workItem from="1635264428071" duration="67190000" />
     </task>
     <servers />
   </component>
@@ -366,18 +438,19 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98550000" />
+    <option name="totallyTimeSpent" value="108496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8065268" weight="0.18910742" />
-      <window_info id="Structure" order="1" sideWeight="0.19347319" side_tool="true" visible="true" weight="0.18910742" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8037866" visible="true" weight="0.18910742" />
+      <window_info id="Structure" order="1" sideWeight="0.19621342" side_tool="true" visible="true" weight="0.18910742" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.9039334" visible="true" weight="0.95090014" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.90468985" weight="0.049099836" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.9039334" visible="true" weight="0.049099836" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.90468985" weight="0.18657938" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -428,7 +501,7 @@
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <condition expression="foodsLocations[i]==14" language="Python" />
           <url>file://$PROJECT_DIR$/searchAgents.py</url>
-          <line>723</line>
+          <line>741</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -459,18 +532,33 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/test_cases/dijkstraTest.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="244" />
+          <line>123</line>
+          <option name="timeStamp" value="258" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/searchAgents.py</url>
+          <line>659</line>
+          <option name="timeStamp" value="260" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test_cases/dijkstraTest.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/searchAgents.py</url>
+          <line>590</line>
+          <option name="timeStamp" value="263" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/search$dijkstraTest.coverage" NAME="dijkstraTest Coverage Results" MODIFIED="1635452825603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_cases" />
+    <SUITE FILE_PATH="coverage/search$dijkstraTest.coverage" NAME="dijkstraTest Coverage Results" MODIFIED="1635497355703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test_cases" />
     <SUITE FILE_PATH="coverage/search$Doctests_in_eightpuzzle.coverage" NAME="Doctests in eightpuzzle Coverage Results" MODIFIED="1635086351727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/search$grading.coverage" NAME="grading Coverage Results" MODIFIED="1635269438274" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/search$autograder.coverage" NAME="autograder Coverage Results" MODIFIED="1635454147901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/search$pacman.coverage" NAME="pacman Coverage Results" MODIFIED="1635275661027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/search$autograder.coverage" NAME="autograder Coverage Results" MODIFIED="1635500568504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/search$pacman.coverage" NAME="pacman Coverage Results" MODIFIED="1635501354374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="breakpointCondition">
@@ -576,16 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="338" column="17" selection-start-line="338" selection-start-column="8" selection-end-line="338" selection-end-column="17" />
-          <folding>
-            <element signature="e#1292#1302#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Program Files (x86)/Python38-32/Lib/site-packages/treelib/tree.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -607,34 +685,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/searchTestClasses.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513">
-          <caret line="458" column="1" lean-forward="true" selection-start-line="458" selection-start-column="1" selection-end-line="458" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/travelingSalesMan.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/autograder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="332" column="4" selection-start-line="332" selection-start-column="4" selection-end-line="332" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1067">
-          <caret line="307" selection-start-line="307" selection-end-line="307" />
-          <folding>
-            <element signature="e#774#785#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -645,20 +699,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="501" column="14" selection-start-line="501" selection-start-column="14" selection-end-line="501" selection-end-column="14" />
+          <folding>
+            <element signature="e#1292#1302#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_cases/dijkstraTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="46" column="4" selection-start-line="46" selection-start-column="4" selection-end-line="102" selection-end-column="17" />
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding>
             <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/autograder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="332" column="4" selection-start-line="332" selection-start-column="4" selection-end-line="332" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchTestClasses.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="501" selection-start-line="501" selection-end-line="501" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="271" column="33" selection-start-line="271" selection-start-column="33" selection-end-line="271" selection-end-column="33" />
+          <folding>
+            <element signature="e#774#785#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/searchAgents.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="661" column="36" selection-start-line="661" selection-start-column="36" selection-end-line="661" selection-end-column="36" />
+        <state relative-caret-position="468">
+          <caret line="581" column="1" selection-start-line="581" selection-start-column="1" selection-end-line="581" selection-end-column="1" />
+          <caret line="582" column="1" selection-start-line="582" selection-start-column="1" selection-end-line="582" selection-end-column="1" />
+          <caret line="583" column="1" selection-start-line="583" selection-start-column="1" selection-end-line="583" selection-end-column="1" />
+          <caret line="584" column="1" selection-start-line="584" selection-start-column="1" selection-end-line="584" selection-end-column="1" />
+          <caret line="585" column="1" selection-start-line="585" selection-start-column="1" selection-end-line="585" selection-end-column="1" />
+          <caret line="586" column="1" selection-start-line="586" selection-start-column="1" selection-end-line="586" selection-end-column="1" />
+          <caret line="587" column="1" selection-start-line="587" selection-start-column="1" selection-end-line="587" selection-end-column="1" />
+          <caret line="588" column="1" selection-start-line="588" selection-start-column="1" selection-end-line="588" selection-end-column="1" />
+          <caret line="589" column="1" selection-start-line="589" selection-start-column="1" selection-end-line="589" selection-end-column="1" />
+          <caret line="590" column="1" selection-start-line="590" selection-start-column="1" selection-end-line="590" selection-end-column="1" />
+          <caret line="591" column="1" selection-start-line="591" selection-start-column="1" selection-end-line="591" selection-end-column="1" />
+          <caret line="592" column="1" selection-start-line="592" selection-start-column="1" selection-end-line="592" selection-end-column="1" />
           <folding>
             <element signature="e#1354#1381#0" expanded="true" />
           </folding>

@@ -42,7 +42,7 @@ import time
 import search
 from copy import deepcopy
 import itertools
-import sys
+import math
 
 
 class GoWestAgent(Agent):
@@ -461,7 +461,6 @@ class FoodSearchProblem:
         self._expanded = 0
         print()
 
-
     def getFoodLocations(self):
      food=self.food.data
      foodLocations=[]
@@ -557,6 +556,7 @@ class AStarFoodSearchAgent(SearchAgent):
 #    corners = state[1]  # These are the corner coordinates
 #    currentLocation = state[0]
 #    sumDistance = 0
+#    lastCost=0
 #    print()
 #    while len(corners):
 #        priorityQueue = util.PriorityQueue()
@@ -565,8 +565,11 @@ class AStarFoodSearchAgent(SearchAgent):
 #            priorityQueue.push(corners[i], distance)
 #        print()
 #        nearestCorner = priorityQueue.pop()
-#        sumDistance += manhattanDistance(currentLocation, nearestCorner)
-#        #sumDistance += euclideanDistance(currentLocation, nearestCorner)
+#        costTemp= manhattanDistance(currentLocation, nearestCorner)
+#        if lastCost<costTemp:
+#         sumDistance +=costTemp-lastCost
+#        else:sumDistance+=costTemp
+#        lastCost=costTemp
 #        currentLocation = deepcopy(nearestCorner)
 #        corners = list(corners)
 #        corners.remove(nearestCorner)
@@ -576,86 +579,101 @@ class AStarFoodSearchAgent(SearchAgent):
 #    return sumDistance
 #    "*** YOUR CODE HERE ***"
 
-def costCalulator(costDict,source,corners):
-    stack = util.Stack()
-    stack.push([source, corners])
-    print()
-    while not stack.isEmpty():
-        arg = stack.pop()
-        source = arg[0]
-        corners = arg[1]
-        print()
-        costs = []
-        nextArg = None
-        i = 0
-        c1 = 0
-        c2 = 0
-        c3 = 0
-        if not (source, tuple(corners)) in costDict.keys():
-            print()
-            if len(corners) == 0:
-                costs.append(0)
-                print()
-            elif len(corners) == 1:
-                costs.append(manhattanDistance(source, corners[0]))
-                print()
-            else:
-                for i in range(1, len(corners), 1):
-                    loopSource = source
-                    loopCorners = corners[0:i]
-                    if (loopSource, tuple(loopCorners)) in costDict.keys():
-                        c1 = costDict[(loopSource, tuple(loopCorners))]
-                    else:
-                        nextArg = [loopSource, loopCorners]
-                        costs = []
-                        print()
-                        break
-
-                    loopSource = corners[i]
-                    loopCorners = corners[i + 1:len(corners)]
-                    if (loopSource, tuple(loopCorners)) in costDict.keys():
-                        c2 = costDict[(loopSource, tuple(loopCorners))]
-                    else:
-                        nextArg = [loopSource, loopCorners]
-                        costs = []
-                        print()
-                        break
-
-                    c3 = manhattanDistance(corners[i - 1], corners[i])
-                    print()
-
-                    costs.append(c1 + c2 + c3)
-                    print()
-
-        if len(costs):
-            costDict[(source, tuple(corners))] = min(costs)
-            print()
-        elif nextArg != None:
-            stack.push(arg)
-            stack.push(nextArg)
-            print()
-
-def foodHeuristic(state, problem):
-    """"""
-
+ def foodHeuristic(state, problem):
+ 
     corners = state[1]  # These are the corner coordinates
     currentLocation = state[0]
+    sumDistance = 0
+    print()
+    for i in range(len(corners)):
+        sumDistance+=euclideanDistance(currentLocation,corners[i])
+ 
+    print()
+    if len(corners)==0:return 0
+    else:return (sumDistance/len(corners))
 
-    cornersPermutations = itertools.permutations(corners)
-    costDict = dict()
-    costs = []
-    for item in cornersPermutations:
-        costCalulator(costDict, currentLocation, list(item))
-    keys = list(costDict.keys())
-    print()
-    for i in range(len(keys)):
-        if len(keys[i][1]) == len(corners):
-            key = keys[i]
-            cost = costDict[key]
-            print()
-            costs.append(cost)
-    print()
-    return min(costs)
+#def costCalulator(costDict,source,corners,Min):
+#
+#    stack=util.Stack()
+#    stack.push([source,corners])
+#    notDone=True
+#    print()
+#    while not stack.isEmpty() and notDone:
+#     arg=stack.pop()
+#     source=arg[0]
+#     corners=arg[1]
+#     nextArg = None
+#     c1=-1
+#     c2=-1
+#     cost=-1
+#     print()
+#
+#     if not (source,tuple(corners)) in costDict.keys():
+#      print()
+#
+#      if len(corners) == 0:
+#          costDict[(source,tuple(corners))]=0
+#          print()
+#
+#      elif len(corners) == 1:
+#          costTemp=manhattanDistance(source, corners[0])
+#          costDict[(source,tuple(corners))]=costTemp
+#          if costTemp>Min:
+#              notDone=False
+#          print()
+#
+#      else:
+#          #for i in range(1,len(corners),1):
+#        loopSource=source
+#        loopCorners=corners[0:len(corners)-1]
+#        if (loopSource, tuple(loopCorners)) in costDict.keys():
+#            c1=costDict[(loopSource,tuple(loopCorners))]
+#            if c1>Min:notDone=False
+#            print()
+#        else:
+#            nextArg=[loopSource,loopCorners]
+#            print()
+#
+#        if nextArg==None:
+#         c2=manhattanDistance(corners[len(corners)-2],corners[len(corners)-1])
+#         if c2>Min:notDone=False
+#         cost=c1+c2
+#         print()
+#
+#     if cost>-1:
+#         costDict[(source,tuple(corners))]=cost
+#         if cost>Min:notDone=False
+#         print()
+#
+#     elif nextArg!=None:
+#          stack.push(arg)
+#          stack.push(nextArg)
+#          print()
+
+
+#def foodHeuristic(state, problem):
+#    """"""
+#
+#    corners = state[1]  # These are the corner coordinates
+#    currentLocation = state[0]
+#
+#    print()
+#    costDict = dict()
+#    cornersPermutations = itertools.permutations(corners)
+#    Min = math.inf
+#    for permutation in cornersPermutations:
+#        costCalulator(costDict, currentLocation, list(permutation), Min)
+#    keys = list(costDict.keys())
+#    print()
+#    for i in range(len(keys)):
+#        if len(keys[i][1]) == len(corners):
+#            key = keys[i]
+#            cost = costDict[key]
+#            if cost < Min:
+#                Min = cost
+#
+#    print()
+#    return Min
 
 
 class ClosestDotSearchAgent(SearchAgent):
