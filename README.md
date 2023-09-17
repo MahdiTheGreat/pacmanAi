@@ -1,6 +1,8 @@
-# pacmanAi
-In this project, we implement the exercises specefied in the link below:
-https://inst.eecs.berkeley.edu/~cs188/su21/project1/
-Some of the code for this project is borrowed from the link above.
+## pacmanAi
+This assignment is taken from https://inst.eecs.berkeley.edu/~cs188/sp22/project1/
+The original code can be found at https://inst.eecs.berkeley.edu/~cs188/sp22/assets/files/search.zip
+ 
+
+
 
 
