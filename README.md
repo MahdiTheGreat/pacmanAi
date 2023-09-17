@@ -1,9 +1,9 @@
-## pacmanAi
+# pacmanAi
 This assignment is taken from https://inst.eecs.berkeley.edu/~cs188/sp22/project1/
 
 The original code can be found at https://inst.eecs.berkeley.edu/~cs188/sp22/assets/files/search.zip
 
-# Summary
+## Summary
 In this project, we tried to implement different search algorithms, design a few heuristics for different problems, and design an Agent that uses a greedy algorithm to eat all the dots or foods in the maze.
 
 Implementation of different functions and classes that were required for questions went rather smoothly, as Mahdi, a member of the team was familiar with this project beforehand, although some challenge was faced when solving question 7, as it required a strong heuristic.
