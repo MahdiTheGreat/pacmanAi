@@ -33,6 +33,9 @@ description for details.
 
 Good luck and happy searching!
 """
+
+"""Edited by Mahdi Afarideh with student ID mai23mah"""
+
 from typing import List, Tuple, Any
 
 from game import Directions
@@ -43,6 +46,7 @@ import time
 import search
 import pacman
 from copy import deepcopy
+
 
 class GoWestAgent(Agent):
     "An agent that goes West until it can't."
@@ -632,6 +636,27 @@ def foodHeuristic(state: Tuple[Tuple, List[List]], problem: FoodSearchProblem):
     Subsequent calls to this heuristic can access
     problem.heuristicInfo['wallCount']
     """
+    """The heuristic used for the foodSearchProblem is equal to the sum of distances from all foods divided by the 
+    number of foods. This is an admissible heuristic, which in the worst case, the case in which all the food are in 
+    a row, the amount of is less than or equal to the cost necessary to eat them. For example, suppose we are at the 
+    point (0,0) and there are n foods at the points (1,0) to (n,0). This is the worst case, as all the foods are in 
+    one row and all can be eaten with the cost of n. In this case, the value of our heuristic will be less or equal 
+    to n, which can be seen below: 
+    
+    h(x)=(1^2+...+n^2)/(1+...+n)<=n(1+...+n)/(1+...+n)<=n 
+    
+    Note that n cannot be zero because then the problem is solved. Also, to prove its consistency, we assume that we 
+    are in state m-1 and y_1 to y_n is equal to the distance of the current location from the foods x_1 to x_n. 
+    Now we are at state m and by moving to a place where the heuristic value is less,which is state m, 
+    at worst case the distances to all the foods are lessened by one and our heuristic function will have the value 
+    below:
+    h(m-1)=(y_1+2y_2+...+ny_n)/(1+...+n)->h(m)=(y_1+2y_2+...+ny_n)/(1+...+n)-(1+...+n)/(1+...+n)=h(m-1)-1
+    
+    therefore:
+    
+    h(m-1)-h(m)=1 <=cost(m-1 to m)=1 
+    
+    which proves our heuristic is consistent"""
     currentLocation, food = state
     foodGrid=food.data
     walls=problem.walls

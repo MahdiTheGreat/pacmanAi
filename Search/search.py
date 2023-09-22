@@ -17,6 +17,8 @@ In search.py, you will implement generic search algorithms which are called by
 Pacman agents (in searchAgents.py).
 """
 
+"""Edited by Mahdi Afarideh with student ID mai23mah"""
+
 import util
 # import treelib
 from enum import Enum
@@ -105,6 +107,9 @@ class Search_alg_mode(Enum):
     dfs = 'depthFirstSearch'
 
     bfs = 'breadthFirstSearch'
+
+    """cost search covers both uniform cost search and astar. that is in uniform cost search the null heuristic is 
+    used."""
 
     cs = 'costSearch'
 
